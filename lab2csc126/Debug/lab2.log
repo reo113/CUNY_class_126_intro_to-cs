@@ -1,0 +1,4 @@
+﻿  lab2.cpp
+C:\Users\13472\source\repos\lab2\lab2.cpp(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\13472\source\repos\lab2\lab2.cpp(27,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  lab2.vcxproj -> C:\Users\13472\source\repos\lab2\Debug\lab2.exe
