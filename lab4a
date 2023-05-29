@@ -1,0 +1,51 @@
+// lab4a.cpp : This file contains the 'main' function. Program execution begins and ends there.
+/*
+* Robert Ortiz
+* Using loops to calucluate when the populations cease breeding and dies
+* 1. Declare variables and state its value.
+* 2. Display headings
+* 3. Determine birth rate and death rate to get new population.
+* 4. Display values
+*/
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+	/*
+	Declare variables*/
+	const double birthRate = 5;
+	const double deathRate = 17;
+	const int threshold = 165;
+	int startPop = 1500;
+	int year = 1;
+	int killed =0;
+	int newBirths =0;
+	int pop=0;
+	while (startPop >= threshold) {
+		cout << "Year: " << setw(20) << year << endl;
+		cout <<  "Alive at the start: " << setw(10) << startPop << endl;
+		cout <<  "New Births: " << setw(20) << birthRate / 100 * startPop << endl;
+		cout <<  "Killed: " << setw(20) << ((startPop + newBirths) * (deathRate /100)) << endl;
+		cout <<  "Alived at the End: " << setw(10) << startPop + newBirths - killed << endl;
+		year++;
+		startPop = pop;
+	}
+
+	return 0;
+}
+
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+// Tips for Getting Started: 
+//   1. Use the Solution Explorer window to add/manage files
+//   2. Use the Team Explorer window to connect to source control
+//   3. Use the Output window to see build output and other messages
+//   4. Use the Error List window to view errors
+//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
