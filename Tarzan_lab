@@ -1,0 +1,81 @@
+// Tarzan_lab.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+/*
+Program to determine how many people Tarzan can save from the cannibals*/
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+	double m = 10;
+	int can = 30;
+	double rate = .3;
+	int t = 80;
+	int hr = 0;
+	int day = 0;
+	double eaten;
+
+
+	// heading of the output 
+	cout << setw(3) << "End of Hour" << setw(20) << "Missionaries Left" << setw(20) << "Cannibals Eating" << setw(20) << "Tarzan Distance" <<
+		setw(3) << hr << setw(20) << m << setw(20) << can << setw(20) << t << endl;
+
+
+	while (t >= 1 || m >= 1) {
+
+		// while loop rule for tarzens spped and missionaries left 
+		if (day <= 3) { // if statement for day light 
+			eaten = can / (rate * 100);
+			m = m - eaten;
+			can--;
+			day++;
+			hr++;
+			cout << setw(3) << hr << setw(20) << m << setw(20) << can << setw(20) << t << endl;
+		}
+		else if (day < 12) { // rules for tarzans speed during night 
+			eaten = can / (rate * 100);
+			m = m - eaten;
+			can--;
+			t = t - 4;
+			day++;
+			hr++;
+			cout << setw(3) << hr << setw(20) << m << setw(20) << can << setw(20) << t << endl;
+		}
+		// resets the prgram to startAT THE FIRST IF WHILE the while loop is true 
+		else {
+
+			day = 1;
+		}
+		// make sure negative numbers are not output and displays answer 
+		if (m < 0) {
+			cout << endl;
+			cout << "Cannibals Caught: " << can << endl;
+			cout << endl;
+			cout << "Missionaries Saved: " << 0 << endl;
+		}
+		else {
+			cout << endl;
+			cout << "Cannibals Caught: " << can << endl;
+			cout << endl;
+			cout << "Missionaries Saved: " << static_cast<int>(m) << endl;
+
+		}
+
+	}
+}
+	
+
+		// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+		// Debug program: F5 or Debug > Start Debugging menu
+
+		// Tips for Getting Started: 
+		//   1. Use the Solution Explorer window to add/manage files
+		//   2. Use the Team Explorer window to connect to source control
+		//   3. Use the Output window to see build output and other messages
+		//   4. Use the Error List window to view errors
+		//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+		//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
