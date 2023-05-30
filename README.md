@@ -31,3 +31,9 @@ Don't forget to add in the days for the current date within a month
 Ex. if the user inputs month = 4, day = 22, year = 1995 Since 1995 is not a leap year add 90 days (total for January, February, and March) then to that add 22 for the number of days in April for a total of 112 days.
 
 Output - Organize your prompts, and output in a neat orderly fashion. Print a statement telling whether the year is a leap year and another statement about the number of days since January 1 of that year has past.
+
+# lab 4a
+Simple program to determine the given population growth rate within a certain period of time.
+
+# lab 4b
+Simple program to solve Factorial problem.
