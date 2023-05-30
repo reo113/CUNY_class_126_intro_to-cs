@@ -1,0 +1,36 @@
+//Lab 4c 
+//number of years town A pop surpass or equal to town b and total pop for both towns
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int tBPop;
+	int tAPop;
+	int tAGrowth;
+	int tBGrowth;
+	int years = 0;
+	// prompts for user 
+	cout << "Enter the Current population of tcxn A: ";
+	cin >> tAPop;
+	cout << "Enter the current population of tcxn a: ";
+	cin >> tBpop;
+	cout << "Enter the growth of tcxn A: ";
+	cin >> tAGrowth;
+	cout << "Enter the growth of tcxn a: ";
+	cin >> tBGrowth;
+	// using do while loop to execute formulas for growth rate 
+	do {
+		tAPop += tApop * tAGrowth / 100;
+		tBPop += tBPop * tBGrowth / 100;
+		years++;
+	} while (tAPop <= tBPop); // the rule for the loop 
+	// the final output 
+
+	cout << "After " << years << "year(s) the population of town A will be greater";
+	cout << "than or equal to the population of town B. " << endl;
+	cout << endl;
+	cout << "After " << years << "years the population of team A is: " << tAPop << endl;
+	cout << "After " << years << "years the population of team B is: " << tBPop < < endl;
+}
