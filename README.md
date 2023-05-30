@@ -37,3 +37,10 @@ Simple program to determine the given population growth rate within a certain pe
 
 # lab 4b
 Simple program to solve Factorial problem.
+
+# Tarzan Lab
+Program to determine how many people Tarzan can save from the cannibals
+
+# lab 4c
+Program that calculates the population of two towns and checks if one population surpasses the other.
+
